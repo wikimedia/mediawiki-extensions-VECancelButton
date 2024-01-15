@@ -1,0 +1,54 @@
+{
+	"name": "VECancelButton",
+	"version": "1.0",
+	"author": [
+		"[https://wikiteq.com/ WikiTeq]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:VECancelButton",
+	"descriptionmsg": "vecancelbutton-desc",
+	"license-name": "MIT",
+	"type": "editor",
+	"requires": {
+		"MediaWiki": ">= 1.39.0",
+		"extensions": {
+			"VisualEditor": "*"
+		}
+	},
+	"MessagesDirs": {
+		"VECancelButton": [
+			"i18n"
+		]
+	},
+	"attributes": {
+		"VisualEditor": {
+			"PluginModules": [
+				"ext.vecancelbutton"
+			]
+		}
+	},
+	"ResourceModules": {
+		"ext.vecancelbutton": {
+			"scripts": [
+				"modules/ve.ui.MWCancelTool.js"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"dependencies": [
+				"ext.visualEditor.core",
+				"ext.visualEditor.base",
+				"ext.visualEditor.mediawiki",
+				"ext.visualEditor.data"
+			],
+			"messages":[
+				"cancel"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "VECancelButton"
+	},
+	"manifest_version": 2
+}
