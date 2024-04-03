@@ -1,14 +1,12 @@
-
 ve.init.mw.targetFactory.on( 'register', function ( name, target ) {
 	if ( name === 'article' ) {
 		target.static.actionGroups.push( {
 			name: 'cancel',
 			type: 'bar',
-			include: ['cancel']
+			include: [ 'cancel' ]
 		} );
 	}
 } );
-
 
 /**
  * MediaWiki cancel tool
@@ -30,13 +28,14 @@ OO.inheritClass( ve.ui.MWCancelTool, ve.ui.Tool );
 
 /* Static properties */
 ve.ui.MWCancelTool.static.name = 'cancel';
+// eslint-disable-next-line es-x/no-regexp-prototype-flags
 ve.ui.MWCancelTool.static.flags = [ 'destructive' ];
 ve.ui.MWCancelTool.static.displayBothIconAndLabel = true;
 ve.ui.MWCancelTool.static.group = 'cancel';
 ve.ui.MWCancelTool.static.commandName = 'cancel';
 ve.ui.MWCancelTool.static.autoAddToCatchall = false;
 ve.ui.MWCancelTool.static.autoAddToGroup = false;
-ve.ui.MWCancelTool.static.title = OO.ui.deferMsg('cancel');
+ve.ui.MWCancelTool.static.title = OO.ui.deferMsg( 'cancel' );
 
 /* Registration */
 ve.ui.toolFactory.register( ve.ui.MWCancelTool );

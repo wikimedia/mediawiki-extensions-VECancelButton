@@ -41,7 +41,7 @@
 				"ext.visualEditor.mediawiki",
 				"ext.visualEditor.data"
 			],
-			"messages":[
+			"messages": [
 				"cancel"
 			]
 		}
