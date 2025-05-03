@@ -1,4 +1,4 @@
-ve.init.mw.targetFactory.on( 'register', function ( name, target ) {
+ve.init.mw.targetFactory.on( 'register', ( name, target ) => {
 	if ( name === 'article' ) {
 		target.static.actionGroups.push( {
 			name: 'cancel',
@@ -28,7 +28,7 @@ OO.inheritClass( ve.ui.MWCancelTool, ve.ui.Tool );
 
 /* Static properties */
 ve.ui.MWCancelTool.static.name = 'cancel';
-// eslint-disable-next-line es-x/no-regexp-prototype-flags
+
 ve.ui.MWCancelTool.static.flags = [ 'destructive' ];
 ve.ui.MWCancelTool.static.displayBothIconAndLabel = true;
 ve.ui.MWCancelTool.static.group = 'cancel';
